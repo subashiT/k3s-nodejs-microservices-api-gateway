@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service2
+  namespace: default
+  labels:
+    app: service2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: service2
+  template:
+    metadata:
+      labels:
+        app: service2
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: service2
+        image: 343866269556.dkr.ecr.us-east-1.amazonaws.com/service2
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
