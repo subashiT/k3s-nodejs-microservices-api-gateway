@@ -1,4 +1,4 @@
-# Task 4 — Deploy Two Node.js Microservices on K3s + API Gateway Routing
+# Deploy Two Node.js Microservices on K3s + API Gateway Routing
 
 ## Overview
 This task demonstrates the deployment of **two Node.js microservices** on a **K3s Kubernetes cluster**, exposing them via **NodePort services**, and integrating with **AWS API Gateway** for HTTPS access and clean REST paths using a **custom domain**.
